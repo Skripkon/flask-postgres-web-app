@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Добавить анекдот {% endblock %}</h1>
+<form method="post">
+    <p>
+        <label for="title">Тема</label>
+        <input type="text" name="title" placeholder="Тема">
+        </input>
+    </p>
+
+    <p>
+        <label for="author">Автор</label>
+        <input type="text" name="author" placeholder="Автор">
+        </input>
+    </p>
+
+    <p>
+        <label for="jokeText">Анекдот:</label>
+        <br>
+        <textarea name="jokeText" placeholder="Ваш анекдот" rows="15" cols="60"></textarea>
+    </p>
+    <p>
+        <button type="submit">Добавить</button>
+    </p>
+</form>
+{% endblock %}

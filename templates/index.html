@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Анекдоты {% endblock %}</h1>
+{% for joke in jokes %}
+<div class='joke'>
+    <h3>#{{ joke[0] }} - {{ joke[1] }} by {{ joke[2] }}</h3>
+
+    <p class='jokeText'>{{ joke[3] }}</p>
+    <i>
+        <p>Добавлен {{ joke[4] }}</p>
+    </i>
+</div>
+{% endfor %}
+{% endblock %}
